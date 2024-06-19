@@ -29,7 +29,12 @@ foreach($tableau as $tab){
         src=<?php echo $tab["image"] ?>>
     </a>
     <div class="font-bold text-xl mb-2">
-        <?php print $tab["price"]; ?>
+        <?php
+        $num = number_format(
+            $tab["price"], 0, ".", ",",
+        );
+        print $num;
+        ?>
     </div>
 </div>
         <p class="text-gray-700 text-base px-4">
